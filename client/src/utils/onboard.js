@@ -79,7 +79,7 @@ export const GetParams = async () => {
     getChainID() !== 534351 &&
     getChainID() !== 1442 &&
     getChainID() !== 421614 &&
-    getChainID() !== 1351057110
+    getChainID() !== 80001
   ) {
     response.step = 2;
     return response;

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Modal from "react-modal";
-
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 import styles from "../styles";
 import { CustomButton } from ".";
 import { useGlobalContext } from "../context";
@@ -44,20 +44,17 @@ const OnboardModal = () => {
           </>
         );
 
-      case 1:
-        return (
-          <>
-            <p className={styles.modalText}>
-              You haven't connected your account to Metamask Wallet!
-            </p>
-            <CustomButton
-              title="Connect Account"
-              handleClick={updateCurrentWalletAddress}
-            />
-          </>
-        );
+      // case 1:
+      //   return (
+      //     <>
+      //       <p className={styles.modalText}>
+      //         You haven't connected your account to Metamask Wallet!
+      //       </p>
+          
+      //     </>
+      //   );
 
-      case 2:
+      case 1:
         return (
           <>
             <p className={styles.modalText}>
@@ -68,7 +65,7 @@ const OnboardModal = () => {
           </>
         );
 
-      case 3:
+      case 2:
         return (
           <>
             <p className={styles.modalText}>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { CustomButton, CustomInput, PageHOC } from "../components";
 import { useGlobalContext } from "../context";
 
@@ -77,5 +77,22 @@ export default PageHOC(
   <>
     Connect your wallet to start playing <br /> the ultimate Web3 NFT Battle
     Card Game
+    <div className="bg-yellow-400 w-fit p-4 rounded-md text-black mt-11">
+  <ConnectButton 
+    accountStatus={{
+      smallScreen: "avatar",
+      largeScreen: "full",
+    }}
+    showBalance={{
+      smallScreen: false,
+      largeScreen: true,
+    }}
+    chainStatus="icon"
+  />
+</div>
+
+
+
   </>
+  
 );

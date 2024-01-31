@@ -14,63 +14,22 @@ const config: HardhatUserConfig = {
     },
   },
   networks: {
-    scrollSepolia: {
-      gasPrice: 700000000,
-      url: "https://sepolia-rpc.scroll.io" || "",
-      accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-    },
-    skaleTest: {
-      url: "https://staging-v3.skalenodes.com/v1/staging-fast-active-bellatrix",
-      accounts: [process.env.PRIVATE_KEY ?? ""],
-    },
-    arbitrumSepolia: {
-      url: "https://sepolia-rollup.arbitrum.io/rpc",
-      accounts: [process.env.PRIVATE_KEY ?? ""],
-    },
-    polygonzkEVM: {
-      url: "https://rpc.public.zkevm-test.net",
-      accounts: [process.env.PRIVATE_KEY ?? ""],
+    polygon_mumbai: {
+      url: "https://rpc-mumbai.maticvigil.com",
+      accounts: ["b79dc3a198525a267fabfe7283b0054e4306c7b32a76d55af273c915d6c3c106"],
     },
   },
   etherscan: {
     apiKey: {
-      scrollSepolia: "U83MHQBE237G23FPRTK5UK9GFUZ27BEE6E",
-      polygonzkEVM: "J4M7CG4GUP9SSARK668CEZ8HKT8NNCXUGM",
-      arbitrumSepolia: "DMC4ZTP2JEIYKEPKASY5G1DNM5BIPU8N73",
-      skaleTest: "T4H44ZTMBIRQ8I4YXQPBNWE73B4AGP784C",
+      polygon_mumbai: "CVQZ52DMYRNA215WT6MQGSJ1VAKVX47GSX",
     },
     customChains: [
       {
-        network: "scrollSepolia",
-        chainId: 534351,
+        network: "Mumbai",
+        chainId: 80001,
         urls: {
-          apiURL: "https://api-sepolia.scrollscan.com/api",
-          browserURL: "https://sepolia.scrollscan.io/",
-        },
-      },
-      {
-        network: "skaleTest",
-        chainId: 1351057110,
-        urls: {
-          apiURL: "https://staging-fast-active-bellatrix.explorer.staging-v3.skalenodes.com/api",
-          browserURL: "https://staging-fast-active-bellatrix.explorer.staging-v3.skalenodes.com",
-        },
-      },
-      {
-        network: "arbitrumSepolia",
-        chainId: 421614,
-        urls: {
-          apiURL: "https://api-sepolia.arbiscan.io/api",
-          browserURL: "https://sepolia.arbiscan.io/",
-        },
-      },
-      {
-        network: "polygonzkEVM",
-        chainId: 1442,
-        urls: {
-          apiURL: "https://api-testnet-zkevm.polygonscan.com/api",
-          browserURL: "https://testnet-zkevm.polygonscan.com/",
+          apiURL: "https://api-testnet.polygonscan.com/api",
+          browserURL: "https://rpc-mumbai.maticvigil.com",
         },
       },
     ],
